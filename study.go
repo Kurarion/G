@@ -2,18 +2,19 @@ package main
 
 //注意同一个目录下不能有不同名的包
 import (
-	"fmt"
 	ch4 "./Chapter4"
-	helloworld	"./HelloWorld"
+	"fmt"
 )
 
 func main() {
 	//C4
-	ch4.TestBase()
+	//ch4.TestBase()
 
 	//
-	helloworld.Hello()
+	//helloworld.Hello()
 
 	fmt.Println("xxx")
 
+	//TestConst
+	ch4.TestConst()
 }
