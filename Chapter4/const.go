@@ -73,8 +73,10 @@ const(
 )
 
 func TestConst(){
-	//fmt 的Println/Print方法会在连续的数字型参数之间插入空格
+	//fmt 的Print方法会在连续的数字型参数之间插入空格
+	fmt.Println("变量","名",0,1,1.2,1.3,j,k,"=",o,l);
 	fmt.Print("变量","名",0,1,1.2,1.3,j,k,"=",o,l);
+	fmt.Println()
 
 }
 

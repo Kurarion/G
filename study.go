@@ -17,4 +17,10 @@ func main() {
 
 	//TestConst
 	ch4.TestConst()
+
+	//TestVar
+	//ch4.TestGoos()
+
+	//TestPrint
+	ch4.TestPint()
 }
