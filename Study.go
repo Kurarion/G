@@ -26,4 +26,7 @@ func main() {
 
 	//TestSameName
 	ch4.TestSameName()
+
+	//TestXor
+	ch4.TestXor()
 }
