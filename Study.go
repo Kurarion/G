@@ -23,4 +23,7 @@ func main() {
 
 	//TestPrint
 	ch4.TestPint()
+
+	//TestSameName
+	ch4.TestSameName()
 }
