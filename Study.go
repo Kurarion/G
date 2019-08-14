@@ -16,17 +16,20 @@ func main() {
 	fmt.Println("xxx")
 
 	//TestConst
-	ch4.TestConst()
+	//ch4.TestConst()
 
 	//TestVar
 	//ch4.TestGoos()
 
 	//TestPrint
-	ch4.TestPint()
+	//ch4.TestPint()
 
 	//TestSameName
-	ch4.TestSameName()
+	//ch4.TestSameName()
 
 	//TestXor
-	ch4.TestXor()
+	//ch4.TestXor()
+
+	//TestRand
+	ch4.TestRand()
 }
