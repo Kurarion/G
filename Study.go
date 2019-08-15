@@ -31,5 +31,11 @@ func main() {
 	//ch4.TestXor()
 
 	//TestRand
-	ch4.TestRand()
+	//ch4.TestRand()
+
+	//ExstrCounts
+	ch4.ExConutCharaters()
+
+	//TESTSTRINGS
+	ch4.TestStrFunc()
 }
