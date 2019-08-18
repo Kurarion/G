@@ -34,8 +34,14 @@ func main() {
 	//ch4.TestRand()
 
 	//ExstrCounts
-	ch4.ExConutCharaters()
+	//ch4.ExConutCharaters()
 
 	//TESTSTRINGS
-	ch4.TestStrFunc()
+	//ch4.TestStrFunc()
+
+	//TestOutputDate
+	ch4.TestOutput()
+
+	//TestPtr1
+	ch4.TestPointerPrint()
 }
