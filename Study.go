@@ -47,8 +47,14 @@ func main() {
 	ch4.TestPointerPrint()
 
 	//TestIf
-	ch5.TestIf()
+	//ch5.TestIf()
 
 	//TestChange
-	ch5.TestErrReturn()
+	//ch5.TestErrReturn()
+
+	//TestSwitch
+	//ch5.TestSwitch()
+
+	//TestFor
+	ch5.TestFor()
 }
