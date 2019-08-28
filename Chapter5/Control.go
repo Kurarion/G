@@ -190,6 +190,7 @@ func TestFor(){
 
 	//使用Goto重写循环
 	//注意： 标签后面的语句就是循环体！
+	//注意这与Java似乎有点不同
 	i,j:=0,0
 	loop:
 	j++
@@ -269,3 +270,72 @@ func TestFor(){
 }
 
 //break 与 continue
+
+func TestBTC(){
+	i := 1
+	for{
+		i+=1;
+		if i==10 {
+			break
+		}
+	}
+	//使用Break可以退出循环，一个break的作用范围是该语句出现后的最内部的结构
+	//可以被利用于任何形式的for循环（计数器，条件判断等）
+	//但在switch或select语句中，break语句的作用结果是跳过整个代码块执行后续的代码
+	//注意：break只会退出最内层的循环
+
+	//关键字continue忽略剩余的循环体而直接进入下一次的循环的过程
+	//但不是无条件执行下一次循环，执行之前依旧需要满足循环的判断条件
+
+}
+
+//标签与goto
+
+func TestGoto(){
+	//for switch select语句都可以配合标签label形式的标识符使用
+	//即某一行第一个以冒号结尾的单词（gofmt会将后续代码移至下一行）
+	//注意：Label的名称是大小写敏感的，为了提升可读性，一般使用全部大写字母
+	i := 64
+	LABEL2:
+		i++
+		fmt.Printf("%c",i)
+	if i < 99 {
+		goto LABEL2
+	}
+
+	LABEL1:
+	for i := 0; i <= 5; i++ {
+		LABEL3:
+		for j := 0; j <= 5; j++ {
+			if j==3 {
+				continue LABEL3
+			}
+			if j == 4 {
+				continue LABEL1
+			}
+			fmt.Printf("i is: %d, and j is: %d\n", i, j)
+		}
+	}
+	//for i:=1;i<2;i++{
+	//	continue LABEL1
+	//}
+
+
+	//注意：这里是continue Label 而不是goto Label
+	//如果是continue Label而不会进行i:=0的重声明与赋值
+	//但是continue Label只能在Label后面紧跟着for
+	//而且Label内只有一个for并且这个for内部有continue Label...
+	//但可以多个循环使用多个LABEL并同时相互嵌套
+	//
+	//外部的循环不能使用continue其它LABEL范围的
+	//
+	//结果是i==5&&j==4是不会打印的
+	//但正常来说冒号后面的就是循环体
+	//对于有初始化的for语句来说，实际情况是紧跟在标签后面
+	//上面这个例子，如果使用goto替换continue则会成为无限循环
+
+	//如果一定需要使用goto，应当使用正序的标签
+	//即标签位于goto语句之后
+	//注意：标签和goto语句之间不能出现定义新变量的语句
+
+}

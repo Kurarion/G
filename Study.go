@@ -56,5 +56,8 @@ func main() {
 	//ch5.TestSwitch()
 
 	//TestFor
-	ch5.TestFor()
+	//ch5.TestFor()
+
+	//TestGoto
+	ch5.TestGoto()
 }
